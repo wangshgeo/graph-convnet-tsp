@@ -36,6 +36,11 @@ if __name__ == "__main__":
     with open("tsp{}_train_concorde.txt".format(opts.num_nodes), "w", encoding="utf-8") as f:
         for line in train_data:
             f.write(line)
+            
+    # Create separate test data file
+    with open("tsp{}_test_concorde.txt".format(opts.num_nodes), "w", encoding="utf-8") as f:
+        for line in val_data:
+            f.write(line)
     
     end_time = time.time() - start_time
     
