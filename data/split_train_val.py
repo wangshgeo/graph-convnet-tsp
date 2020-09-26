@@ -24,7 +24,7 @@ if __name__ == "__main__":
     print("Total samples: ", len(filedata))
     val_data = filedata[:opts.val_size]
     print("Validation samples: ", len(val_data))
-    train_data = filedata[opts.val_size:]
+    train_data = filedata[:opts.val_size:]
     print("Training samples: ", len(train_data))
     
     # Create separate validation data file
